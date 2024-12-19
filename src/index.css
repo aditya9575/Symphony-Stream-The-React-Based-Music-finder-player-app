@@ -1,0 +1,206 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e2024 0%, #18181d 100%);
+  color: #ffffff;
+}
+
+/* Navbar Styles */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+}
+
+.brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 0.5rem 1rem;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-button {
+  border-radius: 20px !important;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Welcome Screen Styles */
+.welcome-screen {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.welcome-content {
+  max-width: 800px;
+}
+
+.welcome-icon {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: #007bff;
+}
+
+.welcome-screen h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #007bff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-screen p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature svg {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+/* Music Card Styles */
+.music-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.play-overlay svg {
+  font-size: 3rem;
+  color: white;
+}
+
+.card-image-container:hover .play-overlay {
+  opacity: 1;
+}
+
+.card-image-container:hover img {
+  transform: scale(1.05);
+}
+
+.track-title {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.track-info p {
+  margin: 0.5rem 0;
+}
+
+.track-info svg {
+  margin-right: 0.5rem;
+}
+
+/* Audio Player Styles */
+.custom-audio-player {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+/* Loading Animation */
+.loading-container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.loading-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
