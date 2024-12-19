@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faCalendar, faUser, faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 
-function NavBar() {
+function NavBarComponent() {
     const [tracks, setTracks] = useState([]);
     const [keyWord, setKeyWord] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -109,4 +109,4 @@ function NavBar() {
     );
 }
 
-export default NavBar;
+export default NavBarComponent;
